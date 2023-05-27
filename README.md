@@ -43,7 +43,7 @@ php artisan serve
 
 <br />
 
-# Frontend
+# Front End
 ### Foi criada uma página que tem um input para informar a rota entre os estados, onde ela será verificada através de uma requisição ajax para a Api, e assim confirmar se a rota é válida ou não. Como retorno temos dois possíveis json, que estão nos seguintes formatos:
 ```sh
 {
