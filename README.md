@@ -1,10 +1,10 @@
 # API
-## Desenvolvido uma API REST, onde através de uma requisição ou página web disponível na aplicação é possível informar uma rota entre estados para verificar se ela é válida ou não.
-## Para o desenvolvimento foi utilizado as tecnologias:
-- ### PHP
-- ### Framework Laravel
-- ### Javascript
-- ### CSS
+### Desenvolvido uma API REST, onde através de uma requisição ou página web disponível na aplicação é possível informar uma rota entre estados para verificar se ela é válida ou não.
+### Para o desenvolvimento foi utilizado as tecnologias:
+- #### PHP
+- #### Framework Laravel
+- #### Javascript
+- #### CSS
 
 <br/>
 
