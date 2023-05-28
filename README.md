@@ -1,18 +1,29 @@
-# API
-### Desenvolvido uma API REST, onde através de uma requisição ou página web disponível na aplicação é possível informar uma rota entre estados para verificar se ela é válida ou não.
-### Para o desenvolvimento foi utilizado as tecnologias:
+# Descrição
+### Desenvolvida uma API REST, onde através de uma requisição ou página web disponível na aplicação é possível informar uma rota entre estados, para verificar se ela é válida ou não.
+### Para o desenvolvimento foi utilizado as seguintes tecnologias:
 - #### PHP
 - #### Framework Laravel
 - #### Javascript
 - #### CSS
+<br>
 
-<br/>
-
+# Configuração da API
 ## Instalação da dependencias
 ```sh
 composer install
 ```
 <br />
+
+## Criar uma cópia do arquivo <i>.env.example</i> e nomear como <i>.env</i>
+<br>
+
+## Para executar a aplicação é necessário gerar uma chave
+```sh
+php artisan key:generate
+```
+<br />
+
+# Comandos da API
 
 ## Executar o PHPStan
 ```sh
@@ -36,16 +47,22 @@ composer test
 ```sh
 composer start
 ```
-### ou
+<br>
+
+# Requisição para API
+### Na requisição será necessário passar os parâmetros da query separados por vírgula da seguinte maneira:
+#### <b><i><ip da aplicação:porta de acesso></i>/api/trajeto/validar?rota=<sigla do estado 1>,<sigla do estado 2></b>
+<br>
+
+### Exemplo de utilização:
 ```sh
-php artisan serve
+http://127.0.0.1:8000/api/trajeto/validar?rota=RS,SC
 ```
+#### Lembrando que é possível passar mais do que 2 siglas de estados.
+<br>
 
-<br />
-
-# Front End
-### Foi criada uma página que tem um input para informar a rota entre os estados, onde ela será verificada através de uma requisição ajax para a Api, e assim confirmar se a rota é válida ou não. Como retorno temos dois possíveis json, que estão nos seguintes formatos:
-```sh
+### Como retorno da requisição temos dois possíveis JSON, que estão nos seguintes formatos:
+```json
 {
  "rota": "ROTA_ORIGINAL_AQUI", 
  "isValida": boolean
@@ -56,8 +73,14 @@ php artisan serve
  "mensagem": "MENSAGEM DE ERRO"
 }
 ```
-### Esse retorno será utilizado para criar uma mensagem personalizado a ser exibida na página, como é possível observar na imagem abaixo.
+
+<br>
+
+# Front End
+### Foi criada uma página web que tem um input para informar a rota entre os estados, onde ela será verificada através de uma requisição ajax para a API, e assim confirmar se a rota é válida ou não. 
+### Sendo utilizado do retorno para criar uma mensagem personalizada a ser exibida na página, como é possível observar na imagem abaixo.
 <br/>
 <div align="center">
-<img width="center" src="https://github.com/patrickscheibel/API-Rota/assets/47672652/f4b68947-df6f-4dc3-84f6-93e7dcc26907"/>
-<div>
+    <img width="center" src="https://github.com/patrickscheibel/API-Rota/assets/47672652/f4b68947-df6f-4dc3-84f6-93e7dcc26907"/>
+</div>
+
