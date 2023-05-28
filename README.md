@@ -50,15 +50,15 @@ composer start
 <br>
 
 # Requisição para API
-### Na requisição será necessário passar os parâmetros da query separados por vírgula da seguinte maneira:
-#### <b><i><ip da aplicação:porta de acesso></i>/api/trajeto/validar?rota=<sigla do estado 1>,<sigla do estado 2></b>
-<br>
+### Por padrão as rotas de API do Laravel ficam num arquivo separado das demais requisições, então antes de informar a rota é necessário adicionar `/api/` na url.
+### Na rota `/trajeto/validar`, temos uma requisição `GET` com uma query string com um campo de nome `rota` com as siglas de estados separados por vírgula, deixando a requisição da seguinte maneira:
+#### `<ip da aplicação:porta de acesso>/api/trajeto/validar?rota=<sigla do estado 1>,<sigla do estado 2>`
 
 ### Exemplo de utilização:
 ```sh
 http://127.0.0.1:8000/api/trajeto/validar?rota=RS,SC
 ```
-#### Lembrando que é possível passar mais do que 2 siglas de estados.
+##### Lembrando que é possível passar mais do que duas siglas de estados.
 <br>
 
 ### Como retorno da requisição temos dois possíveis JSON, que estão nos seguintes formatos:
